@@ -131,7 +131,7 @@ DESC
       end
       if !@tag_keys_field.nil? && record.include?(tag_keys_field)
         tags.update(record[tag_keys_field])
-        record.delete(tag_keys_field)
+        values.delete(tag_keys_field)
       end
       if @sequence_tag
         if @prev_timestamp == timestamp
